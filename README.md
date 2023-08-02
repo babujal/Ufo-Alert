@@ -3,13 +3,20 @@
 # Project #1: The Game
 
 ## Attendance
-We will be holding stand-up meetings with instructors at **6:30PM EST (Tuesday/Wednesday) and 10:00AM EST (Saturday)** to have a daily check on the progress your application.
+There are no in person lecture classes during project weeks unless it's listed on the schedule, but we do expect you to be working on your project daily and be available during the usual class times for any meetings and check-ins with instructors as needed. Additionally, an instructor will usually have the classroom open for you to join if you wish to work with your peers or ask for help from instructors.
+_Please note: There are guidelines regarding how you go about asking for instructor help and joining the classroom during this time will not excuse you from following them._
 
-There are no full class days during project weeks, but we expect you to be working on your project from at least **6:30PM - 10:45PM EST (Mon/Thu)** and at least **10AM - 6PM EST (Sat)** during class days and be available during that time for TA hours or any meetings with instructors as needed. You are STILL required to show up to Outcomes during project weeks.   
+Let's take a moment to review [How to Ask a Question](https://git.generalassemb.ly/seirfx-foxglove/mini-project/blob/main/How-To-Ask-A-Question.md) for more detailed information on the policies around asking for help.
+
+There are **daily attendance checks on normal class days at the start of each class period**. A thread will be posted in the classroom channel at 6:30pm EST on Tuesday and Wednesday and at 10am EST on Saturdays and you must respond to it within 2 hours or you will be marked absent.
+_Failure to make an attendance check will result in an unexcused absence_.
+
+We will also be doing weekly stand ups on Saturday afternoons at 1 pm EST and you must be present for the stand up. 
+_Failure to be present for a stand up will result in an unexcused absence for that afternoon_
 
 We also will **still have some attendance checks** during project week, as follows:
 
-  - **Daily (Each Class Day)**: Your attendance will be taken. Stand-up meetings will start next week.
+  - **Daily (Each Class Day)**: Your attendance will be taken via an attendance thread. Stand-up meetings will be at 1pm EST on Saturdays instead of an attendance thread so you must be present in the Zoom at that time.
   - **Saturday, August 12th**: Project presentation day! You're required to be in the class zoom starting at 10:00 AM EST
 
 _Failure to make an attendance check will result in an unexcused absence for both morning and afternoon for that day_.
