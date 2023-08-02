@@ -16,7 +16,7 @@ _Failure to make an attendance check will result in an unexcused absence for bot
 
 ## Project Proposal
 
-Create an issue in this repo using the [**Project Proposal** issue template](https://git.generalassemb.ly/seirfx-dahlia/project-1/issues/new?assignees=&labels=&template=proposal.md&title=Your+Name) and submit it before the proposal submission deadline **Saturday by the end of class**.  Make sure you complete **all of the prompts**.  Use the example proposal found [here](project_proposal_example.md) as a guide.
+Create an issue in this repo using the [**Project Proposal** issue template](https://git.generalassemb.ly/seirfx-foxglove/project-1/issues/new?assignees=&labels=&template=proposal.md&title=Your+Name) and submit it before the proposal submission deadline **Saturday by the end of class**.  Make sure you complete **all of the prompts**.  Use the example proposal found [here](project_proposal_example.md) as a guide.
 
 Your proposal will be reviewed by the instructor team who will communicate feedback with you directly.
 
