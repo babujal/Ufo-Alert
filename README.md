@@ -10,13 +10,13 @@ There are no full class days during project weeks, but we expect you to be worki
 We also will **still have some attendance checks** during project week, as follows:
 
   - **Daily (Each Class Day)**: Your attendance will be taken. Stand-up meetings will start next week.
-  - **Saturday, February 4th**: Project presentation day! You're required to be in the class zoom starting at 10:00 AM EST
+  - **Saturday, August 12th**: Project presentation day! You're required to be in the class zoom starting at 10:00 AM EST
 
 _Failure to make an attendance check will result in an unexcused absence for both morning and afternoon for that day_.
 
 ## Project Proposal
 
-Create an issue in this repo using the [**Project Proposal** issue template](https://git.generalassemb.ly/seirfx-dahlia/project-1/issues/new?assignees=&labels=&template=proposal.md&title=Your+Name) and submit it before the proposal submission deadline **Saturday by 1PM EST**.  Make sure you complete **all of the prompts**.  Use the example proposal found [here](project_proposal_example.md) as a guide.
+Create an issue in this repo using the [**Project Proposal** issue template](https://git.generalassemb.ly/seirfx-dahlia/project-1/issues/new?assignees=&labels=&template=proposal.md&title=Your+Name) and submit it before the proposal submission deadline **Saturday by the end of class**.  Make sure you complete **all of the prompts**.  Use the example proposal found [here](project_proposal_example.md) as a guide.
 
 Your proposal will be reviewed by the instructor team who will communicate feedback with you directly.
 
