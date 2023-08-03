@@ -100,7 +100,7 @@ how)
 
 * **The `README.md` file** in the top level of your repo should have an explanation of what the project is and why you made it, your user stories and wireframes, explanations of the technologies used and the approaches taken, installation instructions, unsolved problems, and forthcoming features.  
 
-* You will present your project to the class on **Saturday, February 4th**.
+* You will present your project to the class on **Saturday, August 12th**.
 
 ---
 
@@ -192,6 +192,6 @@ As a general guide, a passing project might typically average 2/3 in these categ
 
 * __Code Quality__: Did you follow code style guidance and best practices covered in class, such as modularity, semantics, and formatting? Did you comment your code as your instructors have in class?
 
-* __Deployment__: Did you deploy your application to a public url using GitHub Pages?
+* __Deployment__: Did you deploy your application to a public url using GitHub Pages or Netlify?
 
 This will serve as a helpful guide of whether you met the project goals.
