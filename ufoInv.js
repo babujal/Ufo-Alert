@@ -149,6 +149,37 @@ class PlayerTwo {
             this.shootTrigerPressed = false
         }
     }
+    colissionDetection(bullet) {
+        const bulletX = bullet.x
+        const bulletY = bullet.y
+        const ufoX = this.x
+        const ufoY = this.y
+        const ufoWidth = this.width
+        const ufoHeight = this.height
+
+        return (
+            bulletX + bullet.width > ufoX &&
+            bulletX < ufoX + ufoWidth &&
+            bulletY + bullet.height > ufoY &&
+            bulletY < ufoY + ufoHeight)
+    }
+    hitByBullet() {
+        console.log('boosted')
+    }
+    drawIfNotHit(ctx)  {
+        let isHit = false
+        for (let i = playerOne.bullets.length - 1; i >= 0; i--) {
+            const bullet = playerOne.bullets[i]
+            if (this.colissionDetection(bullet)) {
+                playerTwo.hitByBullet()
+                playerOne.bullets.splice(i, 1)
+                isHit = true
+            }
+        }
+        if (!isHit) {
+            this.drawUfo(ctx)
+        }
+    }
 }
 
 
@@ -158,11 +189,11 @@ const gameLoop = () => {
     ctx.fillStyle = 'black'
     ctx.fillRect(0, 0, canvas.width, canvas.height)
     playerOne.drawMovCannon(ctx)
-    playerTwo.drawUfo(ctx)
+    playerTwo.drawIfNotHit(ctx)
     playerOne.bullets.forEach((bullet) => {
         bullet.drawBullet(ctx)
     })
-
+    
 }
 
 const playerTwo = new PlayerTwo (canvas.width / 2, canvas.height /40)
