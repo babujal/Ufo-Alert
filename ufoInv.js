@@ -1,3 +1,5 @@
+import BulletController from "./bulletController.js"
+
 const canvas = document.getElementById('gameArea')
 const ctx = canvas.getContext('2d')
 
@@ -10,6 +12,7 @@ class PlayerOne {
         this.width = width
         this.height = height
         this.speed = 5
+        this.bullets = []
 
         document.addEventListener('keydown',this.keydown)
         document.addEventListener('keyup',this.keyup)
@@ -39,7 +42,16 @@ class PlayerOne {
             console.log('pressed')
             this.x += this.speed
         }
-    } 
+        if (this.shootTrigerPressed) {
+            const bulletX = this.x
+            const bulletY = this.y
+            const bulletSpeed = 10
+            const bulletDamage = 5
+
+            this.bullets.push(new BulletController(bulletX, bulletY, bulletSpeed, bulletDamage ))
+        }
+    }
+
     keydown = (e) => {
         if (e.code === 'KeyA') {
             this.moveLeft = true
@@ -84,6 +96,7 @@ class PlayerTwo {
         ctx.beginPath()
         ctx.ellipse(this.x, this.y, 30, 10, 0, 0, Math.PI *2)
         ctx.fill()
+
     }
 
     movement() {
@@ -138,22 +151,7 @@ class PlayerTwo {
     }
 }
 
-class BulletController {
-    constructor (x, y){
-        this.x = x
-        this.y = y
-        this.width = 4
-        this.height = 4
-        this.damage = 5
-        this.speed = 20
-    }
 
-    drawBullet(ctx) {
-        ctx.fillStyle = 'red'
-        ctx.fillRect(this.x, this.y, this.width, this.height)
-        
-    }
-}
 
 const gameLoop = () => {
     requestAnimationFrame(gameLoop)
@@ -161,6 +159,10 @@ const gameLoop = () => {
     ctx.fillRect(0, 0, canvas.width, canvas.height)
     playerOne.drawMovCannon(ctx)
     playerTwo.drawUfo(ctx)
+    playerOne.bullets.forEach((bullet) => {
+        bullet.drawBullet(ctx)
+    })
+
 }
 
 const playerTwo = new PlayerTwo (canvas.width / 2, canvas.height /40)
