@@ -45,10 +45,8 @@ class PlayerOne {
         if (this.shootTrigerPressed) {
             const bulletX = this.x
             const bulletY = this.y
-            const bulletSpeed = 10
-            const bulletDamage = 5
 
-            this.bullets.push(new BulletController(bulletX, bulletY, bulletSpeed, bulletDamage ))
+            this.bullets.push(new BulletController(bulletX, bulletY, 10, 5 ))
         }
     }
 
@@ -85,6 +83,7 @@ class PlayerTwo {
         this.width = width
         this.height = height
         this.speed = 5
+        this.player = []
 
         document.addEventListener('keydown',this.keydown)
         document.addEventListener('keyup',this.keyup)
@@ -149,6 +148,7 @@ class PlayerTwo {
             this.shootTrigerPressed = false
         }
     }
+    //Collision detection return
     colissionDetection(bullet) {
         const bulletX = bullet.x
         const bulletY = bullet.y
@@ -163,21 +163,22 @@ class PlayerTwo {
             bulletY + bullet.height > ufoY &&
             bulletY < ufoY + ufoHeight)
     }
+    //What to do if is hit
     hitByBullet() {
-        console.log('boosted')
+            this.x = -100
+            this.y = -100
     }
-    drawIfNotHit(ctx)  {
-        let isHit = false
+    doIfHitByBullet()  {
         for (let i = playerOne.bullets.length - 1; i >= 0; i--) {
             const bullet = playerOne.bullets[i]
             if (this.colissionDetection(bullet)) {
-                playerTwo.hitByBullet()
-                playerOne.bullets.splice(i, 1)
-                isHit = true
+                playerOne.bullets.splice(i, 1) 
+                this.health -= bullet.damage
+                console.log(this.health)
             }
-        }
-        if (!isHit) {
-            this.drawUfo(ctx)
+            if (this.health == 0) {
+                this.hitByBullet()
+            }
         }
     }
 }
@@ -189,11 +190,11 @@ const gameLoop = () => {
     ctx.fillStyle = 'black'
     ctx.fillRect(0, 0, canvas.width, canvas.height)
     playerOne.drawMovCannon(ctx)
-    playerTwo.drawIfNotHit(ctx)
+    playerTwo.drawUfo(ctx)
+    playerTwo.doIfHitByBullet()
     playerOne.bullets.forEach((bullet) => {
         bullet.drawBullet(ctx)
     })
-    
 }
 
 const playerTwo = new PlayerTwo (canvas.width / 2, canvas.height /40)
