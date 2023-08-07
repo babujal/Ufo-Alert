@@ -1,6 +1,6 @@
 import PlayerOne from "./playerOneCan.js"
 import PlayerTwo from "./PlayerTwoUfo.js"
-import { ufoHealthScreen, cannonHealthScreen } from "./updateScreen.js"
+import { ufoHealthScreen, cannonHealthScreen, ufoScoreScreen, cannonScoreScreen, scoreUdate } from "./updateScreen.js"
 
 const canvas = document.getElementById('gameArea')
 const ctx = canvas.getContext('2d')
@@ -14,12 +14,19 @@ const gameLoop = () => {
     ctx.fillRect(0, 0, canvas.width, canvas.height)
     playerOne.drawMovCannon(ctx)
     playerTwo.drawUfo(ctx)
+    playerTwo.bullets.forEach((bullet) => {
+        bullet.drawUfoBullet(ctx)
+    })
     playerOne.bullets.forEach((bullet) => {
         bullet.drawBullet(ctx)
     })
     ufoHealthScreen(playerTwo.health)
+    ufoScoreScreen(playerTwo.score)
     cannonHealthScreen(playerOne.health)
+    cannonScoreScreen(playerOne.score)
     playerTwo.doIfHitByBullet(playerOne)
+    playerOne.doIfHitByBullet(playerTwo)
+    scoreUdate(playerOne, playerTwo)
 }
 
 gameLoop()

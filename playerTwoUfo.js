@@ -1,4 +1,5 @@
-import PlayerOne from "./playerOneCan.js"
+
+import BulletController from "./bulletController.js"
 
 export default class PlayerTwo {
     constructor(x, y, health = 100, width = 50, height =10){
@@ -8,6 +9,8 @@ export default class PlayerTwo {
         this.width = width
         this.height = height
         this.speed = 5
+        this.bullets = []
+        this.score = 0
 
         document.addEventListener('keydown',this.keydown)
         document.addEventListener('keyup',this.keyup)
@@ -37,6 +40,12 @@ export default class PlayerTwo {
         if (this.moveDown) {
             this.y += this.speed
         }
+        if (this.shootTrigerPressed) {
+            const bulletX = this.x
+            const bulletY = this.y
+
+            this.bullets.push(new BulletController(bulletX, bulletY, 10, 5 ))
+        } 
     } 
     keydown = (e) => {
         if (e.code === 'ArrowLeft') {

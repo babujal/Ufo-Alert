@@ -9,6 +9,7 @@ export default class PlayerOne {
         this.height = height
         this.speed = 5
         this.bullets = []
+        this.score = 0
 
         document.addEventListener('keydown',this.keydown)
         document.addEventListener('keyup',this.keyup)
@@ -66,6 +67,41 @@ export default class PlayerOne {
         }
         if (e.code === 'KeyW') {
             this.shootTrigerPressed = false
+        }
+    }
+    colissionDetection(bullet) {
+        const bulletX = bullet.x
+        const bulletY = bullet.y
+        const ufoX = this.x
+        const ufoY = this.y
+        const ufoWidth = this.width
+        const ufoHeight = this.height
+
+        return (
+            bulletX + bullet.width > ufoX &&
+            bulletX < ufoX + ufoWidth &&
+            bulletY + bullet.height > ufoY &&
+            bulletY < ufoY + ufoHeight)
+        }
+
+    addScore() {
+        this.playerTwo.score += 1
+    }
+    hitByBullet() {
+        this.x = -100
+        this.y = -100    
+    }
+    doIfHitByBullet(playerTwo)  {
+        for (let i = playerTwo.bullets.length - 1; i >= 0; i--) {
+            const bullet = playerTwo.bullets[i]
+            if (this.colissionDetection(bullet)) {
+                playerTwo.bullets.splice(i, 1) 
+                this.health -= bullet.damage
+                console.log(this.health)
+            }
+            if (this.health == 0) {
+                this.hitByBullet()
+            }
         }
     }
 }
