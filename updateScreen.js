@@ -16,15 +16,19 @@ export const cannonScoreScreen = (score) => {
     cannonScoreDiv.innerText = score
 }
 
-export const scoreUdate = (playerOne, playerTwo) => {
-    let sumPlayerTwo = 0
-    let sumPlayerOne = 0
-    if (playerOne.health <= 0) {
-        sumPlayerTwo += 1
-    }
-    playerTwo.score = sumPlayerTwo
-    if (playerTwo.health <= 0) {
-        sumPlayerOne += 1
-    }
-    playerOne.score = sumPlayerOne
-}
+//Make a function for store a value, Maybe a forEach for ++ purpose and call it inside score
+//upDate, e.s: player.One = return of forEach
+
+// export const scoreUdate = (playerOne, playerTwo) => {
+    
+//     let sumPlayerTwo = 0
+//     let sumPlayerOne = 0
+//     if (playerOne.health <= 0) {
+//         sumPlayerTwo += 1
+//     }
+//     playerTwo.score += 1
+//     if (playerOne.health <= 0) {
+//         sumPlayerOne += 1
+//     }
+//     playerOne.score += 1
+// }
