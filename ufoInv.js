@@ -1,6 +1,7 @@
 import PlayerOne from "./playerOneCan.js"
 import PlayerTwo from "./PlayerTwoUfo.js"
-import { ufoHealthScreen, cannonHealthScreen, ufoScoreScreen, cannonScoreScreen, scoreUdate } from "./updateScreen.js"
+import { ufoHealthScreen, cannonHealthScreen, ufoScoreScreen, cannonScoreScreen, scoreUdate, } from "./updateScreen.js"
+import {restartButton} from "./RestartHandeler.js"
 
 const canvas = document.getElementById('gameArea')
 const ctx = canvas.getContext('2d')
@@ -27,6 +28,7 @@ const gameLoop = () => {
     playerTwo.doIfHitByBullet(playerOne)
     playerOne.doIfHitByBullet(playerTwo)
     scoreUdate(playerOne, playerTwo)
+    restartButton(playerOne, playerTwo)
 }
 
 gameLoop()

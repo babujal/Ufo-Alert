@@ -77,16 +77,13 @@ export default class PlayerOne {
         const ufoWidth = this.width
         const ufoHeight = this.height
 
-        return (
-            bulletX + bullet.width > ufoX &&
-            bulletX < ufoX + ufoWidth &&
-            bulletY + bullet.height > ufoY &&
-            bulletY < ufoY + ufoHeight)
-        }
-
-    addScore() {
-        this.playerTwo.score += 1
+    return (
+        bulletX + bullet.width > ufoX &&
+        bulletX < ufoX + ufoWidth &&
+        bulletY + bullet.height > ufoY &&
+        bulletY < ufoY + ufoHeight)
     }
+    //What to do if is hit
     hitByBullet() {
         this.x = -100
         this.y = -100    
