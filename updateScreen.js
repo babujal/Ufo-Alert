@@ -18,7 +18,7 @@ export const cannonScoreScreen = (score) => {
 
 
 
-// export const scoreUdate = (playerOne, playerTwo) => {
-//     playerOne.score = playerTwo.scoreCount.length
-//     playerTwo.score = playerOne.scoreCount.length
-// }
+export const scoreUdate = (playerOne, playerTwo) => {
+    playerOne.score = playerTwo.scoreCount.length
+    playerTwo.score = playerOne.scoreCount.length
+}
