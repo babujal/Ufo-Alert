@@ -28,12 +28,18 @@ export default class PlayerTwo {
 
     movement() {
         if (this.moveLeft) {
-            console.log('pressed')
-            this.x -= this.speed
+            if (this.x < this.width - 100) {
+                this.x = 800
+            }else{
+                this.x -= this.speed
+            }
         }
         if (this.moveRight) {
-            console.log('pressed')
-            this.x += this.speed
+            if (this.x > 800) {
+                this.x = 0
+            }else{
+                this.x += this.speed
+            }
         }
         if (this.moveUp) {
             this.y -= this.speed
@@ -99,9 +105,10 @@ export default class PlayerTwo {
     }
     //What to do if is hit
     hitByBullet() {
-            this.x = -100
-            this.y = -100
-            this.scoreCount.push('1')
+        this.x = -100
+        this.y = -100
+        this.scoreCount.push('1')
+        alert('CANNON WINS!! Hit play for another round')
     }
     doIfHitByBullet(playerOne)  {
         for (let i = playerOne.bullets.length - 1; i >= 0; i--) {

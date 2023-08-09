@@ -32,15 +32,22 @@ export default class PlayerOne {
         ctx.stroke()
     }
 
+
     movement() {
         if (this.moveLeft){
-            console.log('pressed')
-            this.x -= this.speed
+            if (this.x < this.width - 50) {
+                this.x = this.width - 50
+            }else{
+                this.x -= this.speed
+            }
         }
         if (this.moveRight){
-            console.log('pressed')
+            if (this.x > 800 - 50) {
+                this.x = 800 - 50
+            }
             this.x += this.speed
         }
+        
         if (this.shootTrigerPressed) {
             const bulletX = this.x
             const bulletY = this.y
@@ -90,6 +97,7 @@ export default class PlayerOne {
         this.x = -100
         this.y = -100
         this.scoreCount.push('1')
+        alert('UFO WINS!! Hit play for another round')
     }
 
     doIfHitByBullet(playerTwo)  {
