@@ -9,7 +9,9 @@ export default class PlayerOne {
         this.height = height
         this.speed = 5
         this.bullets = []
+        this.scoreCount = []
         this.score = 0
+        this.healthZero = true  //Flag for encrease score once
 
         document.addEventListener('keydown',this.keydown)
         document.addEventListener('keyup',this.keyup)
@@ -86,18 +88,21 @@ export default class PlayerOne {
     //What to do if is hit
     hitByBullet() {
         this.x = -100
-        this.y = -100    
+        this.y = -100
+        this.scoreCount.push('1')
     }
+
     doIfHitByBullet(playerTwo)  {
         for (let i = playerTwo.bullets.length - 1; i >= 0; i--) {
             const bullet = playerTwo.bullets[i]
             if (this.colissionDetection(bullet)) {
                 playerTwo.bullets.splice(i, 1) 
                 this.health -= bullet.damage
-                console.log(this.health)
             }
-            if (this.health == 0) {
+
+            if (this.health == 0 && this.healthZero) {
                 this.hitByBullet()
+                this.healthZero = false
             }
         }
     }
