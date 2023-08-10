@@ -1,4 +1,4 @@
-# UFO ALERT - README
+# Star Wars Queries - README
 
 ## Table of Contents
 
@@ -11,12 +11,11 @@
 
 ## Description
 
-Welcome to UFO Alert, an exciting 2D, two-player game where you control a cannon defending Earth from incoming UFO attacks! But watch out, the other user will be using a UFO with high maneuverability and teleportation staff. When one user's health is zero, the other user receives a score point and an alert announces the win. Then you have the choice to hit the 'play another round' button to go for another try while players keep their score. Refresh the page to start from 0 score.
+Welcome to UFO Alert, an exciting 2d, two users game where you control a cannon defending Earth from incoming UFO attacks! But watchout, The other user will be using a UFO with high maniobrability and teletransportation staff.. When one user's health is cero the other user receive an score point and an alert anounces the win, then you have the choise to hit the 'play another round' button to go for another try while players keep their score. Refresh the page to start from 0.
 
-## Links
+## Usage
 
-Git Hub repo link: [Ufo-Alert Repository](https://github.com/babujal/Ufo-Alert)
-Visit the Game at [https://ufoalert.netlify.app](https://ufoalert.netlify.app)  to access the Ufo Alert. 
+Visit the Game at ........ to access the Ufo Alert game. 
 
 ## Technologies Used
 
@@ -44,5 +43,5 @@ Visit the Game at [https://ufoalert.netlify.app](https://ufoalert.netlify.app)  
 
 - Name: [Alex Rodriguez]
 
-I hope you find Ufo Alert enjoyable as my kid did!. The truth is out there!
+I hope you find Ufo Alert enjoyable as my kid does!. The truth is out there!
 
