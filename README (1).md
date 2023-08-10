@@ -15,7 +15,7 @@ Welcome to UFO Alert, an exciting 2d, two users game where you control a cannon 
 
 ## Usage
 
-Visit the Game at ........ to access the Ufo Alert game. 
+Visit the Game at https://app.netlify.com/sites/ufoalert/overview to access the Ufo Alert game. 
 
 ## Technologies Used
 
