@@ -10,8 +10,8 @@ export const restartButton = (playerOne, playerTwo) => {
             playerOne.y = 587
             playerTwo.x = 400
             playerTwo.y = 15
-            playerOne.health = 100
-            playerTwo.health = 100
+            playerOne.health = 25
+            playerTwo.health = 25
             playerOne.healthZero = true
             playerTwo.healthZero = true
             playerOne.shootTrigerPressed = false
