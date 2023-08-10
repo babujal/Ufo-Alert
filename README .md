@@ -1,4 +1,4 @@
-# Star Wars Queries - README
+# UFO ALERT - README
 
 ## Table of Contents
 
@@ -11,11 +11,12 @@
 
 ## Description
 
-Welcome to UFO Alert, an exciting 2d, two users game where you control a cannon defending Earth from incoming UFO attacks! But watchout, The other user will be using a UFO with high maniobrability and teletransportation staff.. When one user's health is cero the other user receive an score point and an alert anounces the win, then you have the choise to hit the 'play another round' button to go for another try while players keep their score. Refresh the page to start from 0.
+Welcome to UFO Alert, an exciting 2D, two-player game where you control a cannon defending Earth from incoming UFO attacks! But watch out, the other user will be using a UFO with high maneuverability and teleportation staff. When one user's health is zero, the other user receives a score point and an alert announces the win. Then you have the choice to hit the 'play another round' button to go for another try while players keep their score. Refresh the page to start from 0 score.
 
-## Usage
+## Links
 
-Visit the Game at ........ to access the Ufo Alert game. 
+[Ufo-Alert Repository](https://github.com/babujal/Ufo-Alert)
+Visit the Game at [https://ufoalert.netlify.app](https://ufoalert.netlify.app)  to access the Ufo Alert. 
 
 ## Technologies Used
 
@@ -32,16 +33,14 @@ Visit the Game at ........ to access the Ufo Alert game.
 3- Worked on their shoots and realized the js file was getting to crawly and decide to run the game on modules.
 4- Create all methods I could inside the objects, others were necessary to build them in a separate js file.
 5- Creation of function come on the developing of the site as it got more complicated as I go adding functionalities.
-6- Run in to some issues making the bullets separate, The score update was a problem at the begining
+6- Run in to some issues making the bullets separate, The score update was a problem at the beginning.
 
 ## Unsolved Problems
 
-1- After one of the players get wipe the winner player keep doing his last move till you press play another round button.
-
+1- After one of the players get wiped, the winner player keeps doing his last move until you press the 'play another round' button.
 
 ## Contact Information
 
 - Name: [Alex Rodriguez]
 
-I hope you find Ufo Alert enjoyable as my kid does!. The truth is out there!
-
+I hope you find Ufo Alert enjoyable as my kid did! The truth is out there! 
