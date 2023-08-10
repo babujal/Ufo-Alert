@@ -1,13 +1,13 @@
 import BulletController from "./bulletController.js"
 
 export default class PlayerTwo {
-    constructor(x, y, health = 100, width = 50, height =10){
+    constructor(x, y, health = 25, width = 50, height =10){
         this.x = x
         this.y = y
         this.health = health
         this.width = width
         this.height = height
-        this.speed = 5
+        this.speed = 5  
         this.bullets = []
         this.scoreCount = []
         this.score = 0
@@ -24,8 +24,7 @@ export default class PlayerTwo {
         ctx.beginPath()
         ctx.ellipse(this.x, this.y, 30, 10, 0, 0, Math.PI *2)
         ctx.fill()
-
-    }
+    } 
 
     movement() {
         if (this.moveLeft) {

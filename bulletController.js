@@ -13,7 +13,7 @@ export default class BulletController {
     drawBullet(ctx) {
         ctx.fillStyle = this.color
         this.y -= this.speed
-        ctx.fillRect(this.x, this.y, this.width, this.height)
+        ctx.fillRect(this.x + 25, this.y, this.width, this.height)
     }
     drawUfoBullet(ctx) {
         ctx.fillStyle = this.color

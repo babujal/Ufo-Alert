@@ -1,197 +1,201 @@
 ![](/ga_cog.png)
 
-# Project #1: The Game
+# The Mini-Project: Your first application
 
 ## Attendance
+
 There are no in person lecture classes during project weeks unless it's listed on the schedule, but we do expect you to be working on your project daily and be available during the usual class times for any meetings and check-ins with instructors as needed. Additionally, an instructor will usually have the classroom open for you to join if you wish to work with your peers or ask for help from instructors.
 _Please note: There are guidelines regarding how you go about asking for instructor help and joining the classroom during this time will not excuse you from following them._
 
 Let's take a moment to review [How to Ask a Question](https://git.generalassemb.ly/seirfx-foxglove/mini-project/blob/main/How-To-Ask-A-Question.md) for more detailed information on the policies around asking for help.
 
-There are **daily attendance checks on normal class days at the start of each class period**. A thread will be posted in the classroom channel at 6:30pm EST on Tuesday and Wednesday and at 10am EST on Saturdays and you must respond to it within 2 hours or you will be marked absent.
+There are **daily attendance checks at the start of each class period**. A thread will be posted in the classroom channel at 6:30pm EST on Tuesday and Wednesday and at 10am EST on Saturdays and you must respond to it within 2 hours or you will be marked absent.
 _Failure to make an attendance check will result in an unexcused absence_.
 
 We will also be doing weekly stand ups on Saturday afternoons at 1 pm EST and you must be present for the stand up. 
 _Failure to be present for a stand up will result in an unexcused absence for that afternoon_
 
-We also will **still have some attendance checks** during project week, as follows:
+ALSO PLEASE NOTE: You will have outcomes as usual during project weeks.
 
-  - **Daily (Each Class Day)**: Your attendance will be taken via an attendance thread. Stand-up meetings will be at 1pm EST on Saturdays instead of an attendance thread so you must be present in the Zoom at that time.
-  - **Saturday, August 12th**: Project presentation day! You're required to be in the class zoom starting at 10:00 AM EST
+**Important Dates to Remember:**
 
-_Failure to make an attendance check will result in an unexcused absence for both morning and afternoon for that day_.
+- **Wednesday July 26th**: Mini-Project Approvals and Intro to the Internet lecture. Please come prepared to present your idea to your instructor and make sure you're on Zoom at 6:30 EST.
+- **Wednesday August 2nd**: Mini-Project presentation day! You're required to be in the class zoom starting at 5:00 PM Eastern
+  - NOTE: You must have your project finished, pushed to Github and deployed by 6:30 PM so that you can give your fellow classmates full attention during their presentations
 
-## Project Proposal
 
-Create an issue in this repo using the [**Project Proposal** issue template](https://git.generalassemb.ly/seirfx-foxglove/project-1/issues/new?assignees=&labels=&template=proposal.md&title=Your+Name) and submit it before the proposal submission deadline **Saturday by the end of class**.  Make sure you complete **all of the prompts**.  Use the example proposal found [here](project_proposal_example.md) as a guide.
 
-Your proposal will be reviewed by the instructor team who will communicate feedback with you directly.
+## Project Details
 
-### Overview
+### &#x1F534; Mandatory To Pass:
 
-Let's start out with something fun—**a game!**
+#### MVP - Minimum Viable Product
 
-Everyone will get a chance to **be creative**, and work through some really **tough programming challenges** – since you've already gotten your feet wet with a few small apps, it's up to you to come up with a fun and interesting game to build.
+#### Your application must meet these requirements:
 
-**You will be working individually for this project**, but we'll be guiding you along the process and helping as you go. Show us what you've got!
+1. Built with HTML, CSS and JavaScript
+2. Hosted on Netlify<br>
+3. Commits to Github every class day<br>
+4. A `README.md` file with explanations of the technologies used, the approach taken, a link to your live site, installation instructions, unsolved problems, etc.
 
+#### The app must:
 
----
+1. Use fetch to make a request to an external API (e.g. OMDBapi) and insert some of the data retrieved into the DOM
+1. Implement responsive design (i.e. it should be fully functional on desktop, tablet, mobile, etc)
+1. Have one or more complex user interface modules such as a carousel, a modal, a sticky nav, tooltips, css animations etc
 
-### Proposal
+** Note regarding your complex UI module: you should build this from scratch using Javascript or CSS Animations. The point is to test your ability to combine HTML/CSS with some basic interactivity. If you’re shaky on how to do this, you can reference the CSS Animations morning exercises (or anything else we covered in class). **DO NOT** use libraries like jQueryUI. Build it from scratch. Also, **_DO NOT_ simply google “javascript carousel” and then just copy and paste the code.**
 
-**Your Project must be approved before you start coding.** Your instructor will need to see and approve your user stories and wireframes, and will want you to have an idea of the organization of your app before your start.  This may require you to go back to the drawing board.  Your instructor will help you make sure that you scoped out an achievable MVP (simple enough that you think you could get it built well ahead of the deadline) well-defined, along with a few nice-to-haves and stretch goals.  Your user stories should generally fall into these categories.
+### 📋 List of API's
 
+Below is a non-exhaustive list of some free API's you can use. There are _many_ API's out there, however, so if you find one not on this list that you'd like to use, feel free! Please note that some may require signing up for an API key
 
-### Technical Requirements
+1. Star Wars: https://swapi.dev/
+1. Weather: https://openweathermap.org/api
+1. Giphy: https://developers.giphy.com/
+1. Pokemon: http://pokeapi.co/
+1. Card Deck: https://deckofcardsapi.com/
+1. Google Books: https://developers.google.com/books/
+1. City of Chicago: https://data.cityofchicago.org/
+1. Rick and Morty: https://rickandmortyapi.com/documentation/#rest
 
-Your app must:
+Lastly, the following sites congregates a bunch of API's together, so you can take a look through their libraries and try to find an API that interests you!
 
-* HAVE ITS OWN REPO, under your github.com account (not a fork).
+1. https://github.com/toddmotto/public-apis
+1. https://rapidapi.com/
 
-* ...render a game in the browser using **JavaScript** (you may use jQuery if you like) for DOM manipulation, with separate files for HTML, CSS, and JavaScript, as we have done in class
+Note, however, that not all API's are free and many listed may require payment. We **highly highly recommend** to use a completely free API for your first project dealing with one. If the API is "free" but requires your credit card information, we highly recommend that you do NOT use it. Please check with your instructor first before using an API.
 
-* ...switch turns between two players. If your game doesn't make sense for two players talk to your instructor about it, exceptions can be made for sufficiently challenging one player games.
+#### Test Your Chosen API and Make Sure You Can Fetch Data
 
-* ...implement logic for winning & visually display which player won (or lost)**
+Before you submit your Github Issue Project Proposal, make a request to the API by placing the URL in the browser and validating you can get back data. Once you can get that to work, take a screenshot of the data so you can include it in the Github Issue.
 
-* ...follow the principles we've shown you:
-  * **KISS** ("Keep It Simple Stupid" -- i.e. don't create overly complex solutions to problems when simpler ones will work) and
-  * **DRY** (Don't Repeat Yourself)** principles
-  * Modularity:
-    * e.g. a function should do just one thing and do it well
+### &#x1F535; Stretch Goals (Not Mandatory):
 
-* ...reflect an understanding of the importance of separation of concerns:
-  * Your event listeners/handlers should collect input from the user, not do game logic. Game logic goes in the `game` object.
-  * Your game should be controlled by a `game` object that has properties to store any data that's important to your game, and methods to control the game flow (that call each other and/or are called by the event listeners/handlers)
-  * Classes: if you have, say, 100, or even 8 aliens that you are shooting or bubbles that you are popping or mushrooms that you are collecting or cards that you are showing (or whatever) in your game, and they all have the same basic structure and functionality, consider instantiating classes for them
-  * Again, a function should do one thing and do it well.  A function that prints the scoreboard should simply print the scoreboard, not try to figure out who is winning.
+#### Recommended Features
 
-* ...be deployed online, where the rest of the world can access it (we will show you
-how)
+- Game functionality (e.g. a quiz)
+- Look into [localstorage](https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage) so you can save data to the user's browser
 
-* ...use **semantic markup** for HTML and CSS (adhere to best practices)
+## Make A New Repo
 
-* ...be reasonably complex (this will be planned out in your proposal, and followed up in "stand-ups" each project day)
+:heavy_exclamation_mark: Make your new repo on [GitHub](https://github.com/), **not** GitHub Enterprise!
+  - This is so that anyone can see your repo, not just people signed up to GA's Enterprise instance of Github
+  - We recommend that you name your repo appropriately (make it your app's name, for example `omdb-app`, and _**not**_ something like `unit-one-project`).
 
----
+:heavy_exclamation_mark: **Do not** begin your project within the class repo.
 
-### Necessary Deliverables
+:heavy_exclamation_mark: **Do not** clone your project into the class repo.
 
+1. After your project has been approved, [make a new github repo for your project](https://help.github.com/articles/create-a-repo/).
 
-* Wireframes and User Stories included in a `README.md` file at the top level of your repo.
+## Deploying your Project
 
-  * **Wireframes** - Basically draw out what your game will look like—every different way it could look.  You can use paper or any wireframe tool you find online.  Smartphone snapshots of a whiteboard drawing are fine.
+For anyone to be able to see and use your project, you must deploy it online somewhere. For this project, you will be deploying it onto Netlify.
 
-  * **User Stories** - Wording should center around how a user interacts with your game, for example:
-    1. The user clicks the start button and the level starts
-    2. When the user hits the `f` a fire ball is catapulted at the opponent
-    3. When the user presses a direction key, the hero moves in that direction
-    4. When the user clicks a card it flips over
-    * NOTE: User stories are **not** a paragraph or two generally describing the game.  You must think through each thing the user can do and what it will cause to happen in the game.  It should look more like a _bulleted list_.
 
-* A working MVP (minimum viable product) that is the absolute bare minimum functionality for you game. You will be expected to complete your MVP first before adding fancy features.  You should be able to define which User Stories constitute an MVP.  Your instructor will help you with this during the project proposal phase.
+#### Netlify!
+  - Directions for deploying to Netlify can be found in this [markdown](netlifydeploy.md)). It's very simple so we won't be walking through this live, but if you need extra help, please set up office hours or post in debugging!
 
-* A **working game, built by you**, hosted publicly on the internet, where players can play and win and lose.
 
-* A **link to your hosted working game** in the URL section of your Github repo
+## Technical Demonstration
 
-* A **git repository hosted on Github**, with a link to your hosted game, and frequent commits dating back to the very beginning of the project.
+All projects will be presented to the class. Your presentation should:
 
-* **The `README.md` file** in the top level of your repo should have an explanation of what the project is and why you made it, your user stories and wireframes, explanations of the technologies used and the approaches taken, installation instructions, unsolved problems, and forthcoming features.  
+- Be approximately 5 minutes in length. Keeping your presentation sweet and succinct is key -- consider practicing your presentation beforehand.
+- Show off all features of the app itself
+- Explain the technical details
+- Explain the technical challenges
+- Explain which improvements you might make
 
-* You will present your project to the class on **Saturday, August 12th**.
+You will be sharing your app and your code. Be prepared to answer questions from the instructors and other students.
 
----
+## Meetings with instructors
 
-### Suggested Ways to Get Started
+_An instructor will contact you to setup a meeting time to approve your project._
 
-* **Break the project down into different components** (data, presentation, views, style, DOM manipulation) and brainstorm each component individually. Use whiteboards!
+**Wednesday July 26th @ 6:30 EST - Mandatory Proposals are due. Submit an issue on this repo for this.**<br>
 
-* **Use your Development Tools** (console.log, element inspector, etc) to debug and solve problems.  Your instructor will have you console.log() things if you have not tried that approach.
+You will meet with an instructor for ~15 minutes to get your app idea approved.
 
-* During the day, work through problems in class & **ask questions when you need to!** We're here to help prevent you from burning through your time with wild goose chases, or help you gain insight into how to pivot if you're trying to do too much (this is common with new developers), or make sure you're on track to reach your goals.  But _come to us_!! You need to own your educational journey.
+_How to prepare for your project approval_
 
-* **Commit early, commit often.**  Don’t be afraid to break something because you can always go back in time to a previous version. There should be _at least_ a few dozen commits.
+- Pick a project idea
+- Pick an API
+- Write user stories
+- what should people be able to do on your website?
+- Draw wireframes
+  - at least one wireframe of how your site will look
+  - (draw more for multiple views)
+- Make a schedule for yourself of what you want to accomplish
+  - First day most details
+  - Second day less details broader strokes of what you want to accomplish
+  - Further: try to pick 'milestones' (check with the project markdown that you are building what you need for MVP) and determine the order of importance, be sure to have a separate list for stretch goals
+  - This takes practice so be ready to adjust your schedule
+- You will have to make changes and adjust/adapt as you build
+- **Once you have all of this, open an issue on this repository with the above information included**
 
-* **Consult documentation** (MDN, jQuery API, etc.) to better understand the tools you're using.
+## How to Submit Your Project
 
-* **Plan to write code that you know you will remove later.** Create temporary elements (buttons, links, etc) that trigger events if real data is not available. Write 26 lines of code that helps you solve a problem, even if you only come out of it with 2 useful lines of code that solve your problem precisely.  Even though it might feel weird to delete code you worked hard on for an hour, if it helped you get a solution to a problem, it was time well spent.
+Your project is due on Wednesday Aug 2nd at 6:30 pm EST. You will not be allowed to push any changes or make any deployments after this time.
 
----
+:heavy_check_mark: Add your project to [this google sheet](https://docs.google.com/spreadsheets/d/1g1rxXobWemkhqs4p1jDncqZw5fGEVgQCj1RoX-r545A/edit?usp=sharing). Note that this will be the order you present your projects!
 
-### A few from earlier cohorts
+## Where to go for help during project week
 
-https://kmikitin.github.io/Quarto/ <br>
-https://charlotteprevost.github.io/project-1/ <br>
-https://sierramoore.github.io/vampire-game/ <br>
-https://scrummish.github.io/Space-Invaders-2018/ <br>
-https://webermn15.github.io/Scorch_a-scorched-earth-clone/ <br>
-https://nathanlamontsmith12.github.io/battle-doodles/ <br>
-https://anthonyjlower.github.io/canvas-football-game/ <br>
-https://cswormstedt.github.io/project1/ <br>
-https://billiam1211.github.io/DuckHunt/ <br>
-https://theprosumer.github.io/theprosumer.io/project1/<br>
-https://jccraigw.github.io/project1_Desktop/ <br>
-(same as above, mobile friendly): https://jccraigw.github.io/project1/ <br>
-https://obajuluwa3.github.io/3-Card-Monte/ <br>
-https://wesmarberry.github.io/Memory-Lane-Game/ <br>
-https://joebir.github.io/chess-trainer/ <br>
-https://dhinzo.github.io/polka-match/ <br>
+1. Seek out help online
+2. Seek out help with your classmates
+3. Seek out help with our class TA
+4. After all other avenues have been exhausted, seek help from your assigned instructor. Please refer to [How to Ask a Question](https://git.generalassemb.ly/seirfx-foxglove/mini-project/blob/main/How-To-Ask-A-Question.md) before you reach out.
+_**Please note that we will be limiting the amount of help we offer on this project as you should be fostering a sense of self-sufficiency and practicing finding solutions through the resources you have available to you before you reach out to a more senior developer. This isn't to be mean or because we're lazy. It's because we want you to succeed post-course in your future career.**_
 
 
----
+## Suggested Ways to Get Started
 
-### Sample Project Ideas
+- **Wireframe** Make a drawing of what your app will look like in all of its stages (what does it look like as soon as you log on to the site? What does it look like once data is retrieved?).
 
-##### Blackjack
-Make a one player game where people down on their luck can lose all their money by guessing which card the computer will deal next!
+- **Break the project down into different components** (data, presentation, views, style, DOM manipulation) and brainstorm each component individually.
 
-##### Concentration
-Sometimes just called "Memory", it's a card game in which all of the cards are laid face down on a surface and two cards are flipped face up over each turn. If you get all the matching cards, you've won!
+- **Commit early, commit often.** Don’t be afraid to break something because you can always go back in time to a previous version.
 
-##### Self-scoring Trivia
-Test your wits & knowledge with whatever-the-heck you know about (so you can actually win). Guess answers, have the computer tell you how right you are!
+- **Consult documentation resources** (MDN, jQuery, etc.) at home to better understand what you’ll be getting into.
 
----
+### Think about...
 
-### Extra challenge...
+- **Creativity**  
+  Did you add a personal spin or creative element into your project submission? Did you deliver something of value to the end user?
 
-* See if you can research and use at least one thing/technology/resource we didn't explicitly study in class.  Some API? Some sweet library? Skeleton or Bootstrap? VelocityJS? Firebase? Canvas? Three.js? D3? CSS Keyframes/Animation? jQuery UI? Note: Phaser is _not_ allowed, and **outside library use is strictly subject to instructor approval**.
+- **Code Quality**  
+  Did you follow code style guidance and best practices covered in class, such as spacing, indentation, modularity, and semantic naming? Did you comment your code as your instructors have in class?
 
----
+- **Problem Solving**  
+  Are you able to defend why you implemented your solution in a certain way? Can you demonstrate that you thought through alternative implementations?
 
-### Useful Resources
+## Example Project Idea
 
-* **[MDN Javascript Docs](https://developer.mozilla.org/en-US/docs/Web/JavaScript)** _(a great reference for all things Javascript)_
-* **[Github Pages](https://pages.github.com)** _(for deploying and hosting your game)_
+Below is a very simple project idea using OMDB and jQuery (please note, your project should include more styling and functionality):
 
----
+![](https://i.imgur.com/L6hwHMR.gif)
 
-### Project Feedback + Evaluation
+Consider framing your project around a problem. For example, if I were to create an app similar to the one above, maybe the problem is my friends and I always have weekly movie nights and we're starting to run out of movies to watch. So, I thought about creating an app where I can search for movies and see their summaries. Or just thought about creating an app to help schedule the movie nights with what movie we'll be watching, etc.
 
-Your instructor will review your project. After grading notes will be added to your Student Tracker. To pass, your project must:
+## Past Student Examples
 
-* Meet the MVP definition agreed upon with your instructor during your project proposal.
+- [The Joke Store](https://benjaminpitts.github.io/thejokestore/)
+- [Hero Selector]( https://banutryon.github.io/SuperHero-Project-1/)
+- [Jacket Horoscope](https://kblanck.github.io/jacket-horoscope/)
+- [FlashNewz](https://boring-booth-b430fc.netlify.app/)
 
-* Meet the technical requirements specified in this document.
+## Useful Resources
 
-It should also
+- **[MDN Javascript Docs](https://developer.mozilla.org/en-US/docs/Web/JavaScript)**
+- **[Trello](https://www.trello.com)**
+- **[Figma](https://www.figma.com/)**
 
-* Have a commit history that reflects careful building of one feature at a time, with _at least_ several commits each day.
+## Ready to Request Approval? Submit a Github Issue [here](https://git.generalassemb.ly/seirfx-foxglove/mini-project/issues/new?assignees=&labels=&template=project-approval-issue.md&title=%7BYour+Name+Here%7D+-+Project+1)
 
-* Demonstrate proficiency with the material covered in Unit 1.
+Create the issue and fill out all of the sections. If all sections aren't filled out, you won't be approved.
 
-As a general guide, a passing project might typically average 2/3 in these categories:
+You must fill in the issue template completely in order for your project to be considered for approval. 
 
-* __Project Workflow__: Did you complete the user stories, wireframes, task tracking, and/or ERDs, as specified above? Did you use source control as expected for the phase of the program you’re in (detailed above)?
-
-* __Technical Requirements__: Did you deliver a project that met all the technical requirements? Given what the class has covered so far, did you build something that was reasonably complex?
-
-* __Creativity__: Did you add a personal spin or creative element into your project submission? Did you deliver something of value to the end user?
-
-* __Code Quality__: Did you follow code style guidance and best practices covered in class, such as modularity, semantics, and formatting? Did you comment your code as your instructors have in class?
-
-* __Deployment__: Did you deploy your application to a public url using GitHub Pages or Netlify?
-
-This will serve as a helpful guide of whether you met the project goals.
+<hr>

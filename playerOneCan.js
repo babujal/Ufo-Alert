@@ -1,7 +1,7 @@
 import BulletController from "./bulletController.js"
 
 export default class PlayerOne {
-    constructor(x, y, health = 100, width = 50, height =10){
+    constructor(x, y, health = 25, width = 50, height =10){
         this.x = x
         this.y = y
         this.health = health
