@@ -12,6 +12,7 @@ export default class PlayerTwo {
         this.scoreCount = []
         this.score = 0
         this.healthZero = true  //Flag for encrease score once
+        this.isShooting = true  //Flag for shooting delay
 
         document.addEventListener('keydown',this.keydown)
         document.addEventListener('keyup',this.keyup)
@@ -42,16 +43,31 @@ export default class PlayerTwo {
             }
         }
         if (this.moveUp) {
-            this.y -= this.speed
+            if (this.y < this.width-30) {
+                this.y = this.width-30
+            }else{
+                this.y -= this.speed
+            }
         }
         if (this.moveDown) {
-            this.y += this.speed
+            if (this.y > 500) {
+                this.y = 500
+            }else{
+                this.y += this.speed
+            }
         }
-        if (this.shootTrigerPressed) {
-            const bulletX = this.x
-            const bulletY = this.y
+        if (this.shootTrigerPressed && this.isShooting) {
+            this.isShooting = false
 
-            this.bullets.push(new BulletController(bulletX, bulletY, 10, 5 ))
+            for (let i = 0; i < 2; i++) {
+                const bulletX = this.x
+                const bulletY = this.y
+
+                this.bullets.push(new BulletController(bulletX, bulletY, 10, 5))
+            }
+            setTimeout(() => {
+                this.isShooting = true
+            }, 500)
         } 
     } 
     keydown = (e) => {

@@ -14,6 +14,8 @@ export const restartButton = (playerOne, playerTwo) => {
             playerTwo.health = 100
             playerOne.healthZero = true
             playerTwo.healthZero = true
+            playerOne.shootTrigerPressed = false
+            playerTwo.shootTrigerPressed = false
         }
     }
     button.addEventListener('click', clickHandeler)

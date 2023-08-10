@@ -12,6 +12,7 @@ export default class PlayerOne {
         this.scoreCount = []
         this.score = 0
         this.healthZero = true  //Flag for encrease score once
+        this.isShooting = true
 
         document.addEventListener('keydown',this.keydown)
         document.addEventListener('keyup',this.keyup)
@@ -47,14 +48,21 @@ export default class PlayerOne {
             }
             this.x += this.speed
         }
-        
-        if (this.shootTrigerPressed) {
+
+        if (this.shootTrigerPressed && this.isShooting) {
+            this.isShooting = false
+            
             const bulletX = this.x
             const bulletY = this.y
 
             this.bullets.push(new BulletController(bulletX, bulletY, 10, 5 ))
-        }
+            
+            setTimeout(() => {
+                this.isShooting = true
+            }, 300)
+        }    
     }
+
 
     keydown = (e) => {
         if (e.code === 'KeyA') {
@@ -81,7 +89,7 @@ export default class PlayerOne {
     colissionDetection(bullet) {
         const bulletX = bullet.x
         const bulletY = bullet.y
-        const ufoX = this.x
+        const ufoX = this.x+10
         const ufoY = this.y
         const ufoWidth = this.width
         const ufoHeight = this.height
