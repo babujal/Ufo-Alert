@@ -87,18 +87,18 @@ export default class PlayerOne {
         }
     }
     colissionDetection(bullet) {
-        const bulletX = bullet.x
+        const bulletX = bullet.x 
         const bulletY = bullet.y
-        const ufoX = this.x+10
-        const ufoY = this.y
-        const ufoWidth = this.width
-        const ufoHeight = this.height
+        const cannonX = this.x
+        const cannonY = this.y
+        const cannonWidth = this.width
+        const cannonHeight = this.height
 
     return (
-        bulletX + bullet.width > ufoX &&
-        bulletX < ufoX + ufoWidth &&
-        bulletY + bullet.height > ufoY &&
-        bulletY < ufoY + ufoHeight)
+        bulletX + bullet.width > cannonX &&
+        bulletX < cannonX + cannonWidth &&
+        bulletY + bullet.height > cannonY &&
+        bulletY < cannonY + cannonHeight)
     }
     //What to do if is hit
     hitByBullet() {

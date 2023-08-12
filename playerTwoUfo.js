@@ -105,7 +105,7 @@ export default class PlayerTwo {
     }
     //Collision detection return
     colissionDetection(bullet) {
-        const bulletX = bullet.x
+        const bulletX = bullet.x + 50
         const bulletY = bullet.y
         const ufoX = this.x
         const ufoY = this.y
