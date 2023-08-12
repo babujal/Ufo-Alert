@@ -1,5 +1,5 @@
 import PlayerOne from "./playerOneCan.js"
-import PlayerTwo from "./playerTwoUfo.js"
+import PlayerTwo from "./PlayerTwoUfo.js"
 import { ufoHealthScreen, cannonHealthScreen, ufoScoreScreen, cannonScoreScreen, scoreUdate } from "./updateScreen.js"
 import {restartButton} from "./RestartHandeler.js"
 
