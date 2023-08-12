@@ -9,12 +9,13 @@ export default class BulletController {
         this.height = 10
         this.color = 'red'
     }
-
+    //Draw cannon bullet
     drawBullet(ctx) {
         ctx.fillStyle = this.color
         this.y -= this.speed
         ctx.fillRect(this.x + 25, this.y, this.width, this.height)
     }
+    //draw Ufo bullet
     drawUfoBullet(ctx) {
         ctx.fillStyle = this.color
         this.y += this.speed
