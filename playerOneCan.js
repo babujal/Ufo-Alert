@@ -18,7 +18,6 @@ export default class PlayerOne {
         document.addEventListener('keyup',this.keyup)
     }
     drawMovCannon(ctx) {
-        this.movement()
         //cannon base
         ctx.fillStyle = 'blue'
         ctx.beginPath()
@@ -101,7 +100,7 @@ export default class PlayerOne {
         bulletY < cannonY + cannonHeight)
     }
     //What to do if is hit
-    hitByBullet() {
+    destroyByBullet() {
         this.x = -100
         this.y = -100
         this.scoreCount.push('1')
@@ -117,7 +116,7 @@ export default class PlayerOne {
             }
 
             if (this.health == 0 && this.healthZero) {
-                this.hitByBullet()
+                this.destroyByBullet()
                 this.healthZero = false
             }
         }

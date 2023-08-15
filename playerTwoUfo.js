@@ -19,7 +19,6 @@ export default class PlayerTwo {
     }
 
     drawUfo(ctx) {
-        this.movement()
         ctx.fillStyle = 'green'
         ctx.beginPath()
         ctx.ellipse(this.x, this.y, 30, 10, 0, 0, Math.PI *2)
@@ -55,18 +54,17 @@ export default class PlayerTwo {
                 this.y += this.speed
             }
         }
-        if (this.shootTrigerPressed && this.isShooting) {
+        if ((this.shootTrigerPressed) && (this.isShooting)) {
             this.isShooting = false
 
-            for (let i = 0; i < 2; i++) {
-                const bulletX = this.x
-                const bulletY = this.y
+            const bulletX = this.x
+            const bulletY = this.y
 
-                this.bullets.push(new BulletController(bulletX, bulletY, 10, 5))
-            }
+            this.bullets.push(new BulletController(bulletX, bulletY, 10, 5 ))
+            
             setTimeout(() => {
                 this.isShooting = true
-            }, 500)
+            }, 400)
         } 
     } 
     keydown = (e) => {
@@ -119,7 +117,7 @@ export default class PlayerTwo {
             bulletY < ufoY + ufoHeight)
     }
     //What to do if is hit
-    hitByBullet() {
+    destroyByBullet() {
         this.x = -100
         this.y = -100
         this.scoreCount.push('1')
@@ -134,7 +132,7 @@ export default class PlayerTwo {
                 console.log(this.health)
             }
             if (this.health == 0 && this.healthZero) {
-                this.hitByBullet()
+                this.destroyByBullet()
                 this.healthZero = false
             }
         }

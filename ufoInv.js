@@ -21,6 +21,8 @@ const gameLoop = () => {
     playerOne.bullets.forEach((bullet) => {
         bullet.drawBullet(ctx)
     })
+    playerOne.movement()
+    playerTwo.movement()
     ufoHealthScreen(playerTwo.health)
     ufoScoreScreen(playerTwo.score)
     cannonHealthScreen(playerOne.health)
